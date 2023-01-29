@@ -30,7 +30,7 @@ def scrape_data(data_to_scrape, google_dork, limit=100):
     phones = []
 
     for link in links:
-        if not link.startswith('http'):
+        if link is None or not link.startswith('http'):
             # skip links that are not URLs
             continue
         try:
@@ -66,8 +66,12 @@ def save_to_file(data, data_to_scrape, google_dork):
     print(f"Scraped data saved to {filename}")
     
 def print_banner():
-    cprint("ClientScraper", 'red', attrs=['bold'])
+    print('\n' + '*' * 30)
+    cprint("ClientScraper", 'red', attrs=['bold'], font='big')
+    print('*' * 30)
     cprint(" version 1.2 by 0xFTW", 'yellow', attrs=['bold'])
+    print('\n' + '*' * 30)
+
 
 if __name__ == '__main__':
     print_banner()
