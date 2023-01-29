@@ -6,7 +6,9 @@ import os
 import pyfiglet
 
 banner = pyfiglet.figlet_format("ClientScraper")
+
 print(banner)
+print("version 1.1                  by 0xFTW")
 
 def scrape_emails_and_phones(url):
     try:
@@ -56,6 +58,6 @@ def main():
             write_to_file("emails.txt", emails)
         if data_to_scrape == "phones" or data_to_scrape == "both":
             write_to_file("phones.txt",phones)
-    print("by 0xFTW")
+
 if __name__ == "__main__":
     main()
