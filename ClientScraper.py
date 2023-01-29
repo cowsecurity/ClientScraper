@@ -2,6 +2,7 @@ import requests
 import re
 from bs4 import BeautifulSoup
 from termcolor import cprint
+import pyfiglet
 
 
 def get_soup(url):
@@ -66,11 +67,9 @@ def save_to_file(data, data_to_scrape, google_dork):
     print(f"Scraped data saved to {filename}")
     
 def print_banner():
-    print('\n' + '*' * 30)
-    cprint("ClientScraper", 'red', attrs=['bold'], font='big')
-    print('*' * 30)
+    banner = pyfiglet.figlet_format("ClientScraper")
+    cprint(banner, 'red', attrs=['bold'])
     cprint(" version 1.2 by 0xFTW", 'yellow', attrs=['bold'])
-    print('\n' + '*' * 30)
 
 
 if __name__ == '__main__':
