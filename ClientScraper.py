@@ -69,7 +69,7 @@ def save_to_file(data, data_to_scrape, google_dork):
 def print_banner():
     banner = pyfiglet.figlet_format("ClientScraper")
     cprint(banner, 'red', attrs=['bold'])
-    cprint(" version 1.2 by 0xFTW", 'yellow', attrs=['bold'])
+    cprint(" version 1.5 by 0xFTW", 'yellow', attrs=['bold'])
 
 
 if __name__ == '__main__':
